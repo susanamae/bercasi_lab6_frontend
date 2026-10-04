@@ -158,8 +158,8 @@ function App() {
           <p className="intro">Access your product operations dashboard.</p>
           {error && <p className="message error" role="alert">{error}</p>}
           <form className="stack-form" onSubmit={submitLogin}>
-            <label>Username or email<input autoComplete="username" placeholder="you@example.com" value={login.identifier} onChange={(event) => setLogin({ ...login, identifier: event.target.value })} required /></label>
-            <label>Password<input type="password" autoComplete="current-password" placeholder="Enter your password" value={login.password} onChange={(event) => setLogin({ ...login, password: event.target.value })} required /></label>
+            <label>Username or email<input autoComplete="username" placeholder="admin3" value={login.identifier} onChange={(event) => setLogin({ ...login, identifier: event.target.value })} required /></label>
+            <label>Password<input type="password" autoComplete="current-password" placeholder="admin000" value={login.password} onChange={(event) => setLogin({ ...login, password: event.target.value })} required /></label>
             <button className="button primary full" disabled={busy}>{busy ? 'Signing in...' : 'Enter workspace'}<span aria-hidden="true">-&gt;</span></button>
           </form>
           <p className="security-note"><span className="status-dot" /> Secure workspace access</p>
