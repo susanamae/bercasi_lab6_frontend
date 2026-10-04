@@ -55,11 +55,14 @@
 .product-form { padding: 22px; }
 .table-wrap { border-color: var(--line); }
 
+/* The simple login view keeps the entry point focused on one action. */
+.login-layout { display: grid; place-items: center; min-height: 100vh; padding: 24px; background: #f6f7f8; }
+.login-story { display: none; }
+.login-panel { width: min(100%, 440px); padding: 40px; border: 1px solid var(--line); background: #fff; box-shadow: 0 12px 36px rgba(32, 37, 43, .06); }
+.login-panel::before { content: 'Bercasi / Stockroom'; display: block; margin-bottom: 42px; color: var(--ink); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+
 @media (max-width: 780px) {
   .login-layout { display: block; }
-  .login-story { min-height: 270px; padding: 28px 24px; }
-  .story-copy { padding: 42px 0 18px; }
-  .story-copy h1 { font-size: 42px; }
   .login-panel { width: 100%; padding: 36px 24px 48px; }
 }
 body { min-width: 320px; min-height: 100vh; margin: 0; }
