@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
-const SESSION_KEY = 'northstar-stockroom-session';
+const SESSION_KEY = 'bercasi-stockroom-session';
 const emptyForm = { product_name: '', description: '', price: '', quantity: '' };
 
 function App() {
@@ -148,7 +148,7 @@ function App() {
     return (
       <main className="login-layout">
         <section className="login-story">
-          <div className="story-topline"><span className="logo-mark" aria-hidden="true">N</span><span>Northstar</span></div>
+          <div className="story-topline"><span className="logo-mark" aria-hidden="true">B</span><span>Bercasi</span></div>
           <div className="story-copy"><p className="eyebrow">OPERATIONS CONTROL</p><h1>Keep every item<br /><em>within reach.</em></h1><p>One calm command center for the products that keep your work moving.</p></div>
           <div className="story-footer"><span>STOCKROOM / 01</span><span>EST. 2026</span></div>
         </section>
@@ -171,7 +171,7 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <a className="brand" href="#products"><span className="logo-mark small" aria-hidden="true">N</span><span>Northstar<span className="brand-light"> / Stockroom</span></span></a>
+        <a className="brand" href="#products"><span className="logo-mark small" aria-hidden="true">B</span><span>Bercasi<span className="brand-light"> / Stockroom</span></span></a>
         <div className="account"><span className="avatar">{(session.user?.username || 'A').slice(0, 1).toUpperCase()}</span><span className="account-name">{session.user?.username || 'Account'}</span><button className="button quiet" onClick={logout}>Log out</button></div>
       </header>
 

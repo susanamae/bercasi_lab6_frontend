@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;
+  font-family: 'Space Grotesk', 'Trebuchet MS', sans-serif;  
   color: #17212b;
   background: #eef1f3;
   font-synthesis: none;
@@ -16,6 +16,52 @@
 }
 
 * { box-sizing: border-box; }
+/* Simple workspace theme */
+:root {
+  --ink: #20252b;
+  --muted: #737b84;
+  --line: #e1e4e7;
+  --lime: #eef3e8;
+  --blue: #20252b;
+  --paper: #ffffff;
+}
+
+.login-layout { display: grid; grid-template-columns: 1fr 1fr; background: #f6f7f8; }
+.login-story { min-height: 100vh; padding: 48px; color: var(--ink); background: #f0f2f3; background-image: none; }
+.login-story .logo-mark { color: #fff; background: var(--ink); }
+.story-copy { max-width: 430px; padding: 16vh 0; }
+.story-copy h1 { color: var(--ink); font-size: clamp(38px, 5vw, 64px); letter-spacing: -.05em; }
+.story-copy h1 em { color: var(--ink); }
+.story-copy p:last-child { margin-top: 20px; color: var(--muted); }
+.story-footer { color: var(--muted); }
+.login-panel { width: min(100%, 420px); padding: 48px; background: #fff; }
+.logo-mark { border-radius: 4px; }
+.eyebrow, .panel-kicker, .metric-label { color: var(--muted); }
+.button.primary { background: var(--ink); }
+.button.primary:hover { background: #454c54; transform: none; }
+.topbar { height: 64px; background: #fff; border-bottom: 1px solid var(--line); }
+.brand { color: var(--ink); }
+.brand-light, .account-name { color: var(--muted); }
+.avatar { border-color: var(--line); color: var(--ink); }
+.topbar .button.quiet { color: var(--muted); }
+.topbar .button.quiet:hover { color: var(--ink); }
+.content { padding: 48px 32px 72px; }
+.heading-row { margin-bottom: 28px; }
+.metric-grid { gap: 10px; margin-bottom: 32px; }
+.metric-card { min-height: 118px; padding: 18px; }
+.metric-card.accent { color: var(--ink); background: var(--paper); border-color: var(--line); }
+.metric-card.accent .metric-label, .metric-card.accent .metric-detail { color: var(--muted); }
+.metric-card strong { margin: 12px 0 6px; font-size: 28px; }
+.product-form { padding: 22px; }
+.table-wrap { border-color: var(--line); }
+
+@media (max-width: 780px) {
+  .login-layout { display: block; }
+  .login-story { min-height: 270px; padding: 28px 24px; }
+  .story-copy { padding: 42px 0 18px; }
+  .story-copy h1 { font-size: 42px; }
+  .login-panel { width: 100%; padding: 36px 24px 48px; }
+}
 body { min-width: 320px; min-height: 100vh; margin: 0; }
 button, input, textarea { font: inherit; }
 button { cursor: pointer; }
