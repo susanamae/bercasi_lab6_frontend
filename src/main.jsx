@@ -177,14 +177,8 @@ function App() {
 
       <section className="content" id="products">
         <div className="heading-row">
-          <div><p className="eyebrow">OVERVIEW / STOCKROOM</p><h1>Product inventory</h1><p className="intro">A clear view of everything currently in your operation.</p></div>
+          <div><p className="eyebrow">STOCKROOM</p><h1>Products</h1><p className="intro">Manage your product list.</p></div>
           <button className="button primary" onClick={openNewProduct}><span aria-hidden="true">+</span> Add product</button>
-        </div>
-
-        <div className="metric-grid">
-          <div className="metric-card accent"><span className="metric-label">Total products</span><strong>{products.length.toString().padStart(2, '0')}</strong><span className="metric-detail">Active catalog items</span></div>
-          <div className="metric-card"><span className="metric-label">Units on hand</span><strong>{products.reduce((total, product) => total + Number(product.quantity || 0), 0).toLocaleString()}</strong><span className="metric-detail">Across all products</span></div>
-          <div className="metric-card"><span className="metric-label">Catalog value</span><strong>${products.reduce((total, product) => total + Number(product.price || 0) * Number(product.quantity || 0), 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong><span className="metric-detail">Based on current price</span></div>
         </div>
 
         {notice && <p className="message success" role="status">{notice}</p>}
